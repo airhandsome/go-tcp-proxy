@@ -143,6 +143,7 @@ func (p *Proxy) pipe(src, dst io.ReadWriter) {
 		//show output
 		p.Log.Debug(dataDirection, n, "")
 		p.Log.Trace(byteFormat, b)
+		p.Log.Debug(string(b))
 
 		//write out result
 		n, err = dst.Write(b)
